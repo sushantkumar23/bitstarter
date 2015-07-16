@@ -4,7 +4,7 @@ var app = express();
 //Changes made for index.html integration
 var fs = require('fs');
 
-var buf = new Buffer();
+var buf = new Buffer(50);
 buf = fs.readFileSync('index.html');
 var print = new String();
 print = buf.toString();
