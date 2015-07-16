@@ -1,8 +1,12 @@
 var express = require('express')
 var app = express();
+
+//Changes made for index.html integration
+var fs = require('fs');
+
 var buf = new Buffer ();
 buf = fs.readFileSync(index.html);
-var print = new String()
+var print = new String();
 print = buf.toString();
 
 app.set('port', (process.env.PORT || 5000))
