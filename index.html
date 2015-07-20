@@ -2,104 +2,253 @@
 <html land="en">
     <head>
         <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My first Bitstarter</title>
-        <link type="text/css" rel="stylesheet"
-                      href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css">
+
+        <!-- Style-sheets -->
+        <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link type="text/css" rel="stylesheet" href="https://raw.githubusercontent.com/lipis/bootstrap-social/gh-pages/bootstrap-social.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
         <!--
         <link type="text/css" rel="stylesheet"
-                      href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css">
+                      href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css">
         -->
         <style type="text/css">
+        .container-fluid{
+            max-width: 1280px;
+        }
+
+        .row {
+            padding: 3% 0 3% 0;
+        }
+
+        /* Large desktop 
+        @media (min-width: 980px) {
+            body {
+                padding-top: 70px;
+            }
+            .linediv-l {
+                border-right: 1px white solid;
+            }
+            .linedive-r {
+                border-left: 1px white solid;
+            }
+        }
+        /* Landscapes phones and down 
+        @media (max-width: 480px) {
+            .copy{
+                padding: 2.5% 10%;
+            }
+            .linediv-l {
+                border-bottom: 1px white solid;
+            }
+            .linedive-r {
+                border-top: 1px white solid;
+            }
+        }
+
+        /* All form factors */
                 body {
-                    padding: 20px;
-                    padding-bottom: 40px;
+                    padding-top: 40px;
+                    font-family: 'Roboto', Helvetica, Arial, sans-serif;
                 }
-                .container {
-                    width: 960px;
+                .heading, .subheading {
+                    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+                    text-align: center;   
                 }
                 p.lead {
-                    padding-top: 15px;
+                    padding-top: 1.5%;
+                    font-size: 24px;
+                    line-height: 30px;
                 }
-                .navigation, .pitch, .section1, .section2, .faq, .footer {
-                    padding: 10px 0px 10px 0px;
+                p {
+                    font-size: 15px;
+                    line-height: 22px;
                 }
-                .video, .thermometer, .order, .social {
-                    border: 1px dotted;
+                /* Video pitch and action */
+                /*
+                .pitch {
+                    padding: 2.5% 0%;
+                }
+                
+                .order {
+                    padding: 2% 0%;
+                }
+                .actions {
+                    background-color: #343434;
+                    padding: 3% 0%;
+                } */
+                .video, .thermometer, .order, .social, .statistics, .asset {
                     text-align: center;
                 }
-                .video {
-                /* internal borders = 1px therefore 4 x 1px added to 120px */
-                    height: 124px;
-                    line-height: 124px;
+                /*
+                .statistics h3, .statistics p {
+                    color:white;
                 }
-                .thermometer, .order, .social {
-                    height: 40px;
-                    line-height: 40px;
+                */
+                /* Marketing copy and footer */
+                .copy {
+                    text-align: left;
+                    padding: 0 4% 0 4%;
                 }
-                div.row {
-                    border: 1px solid;
+                .footer {
+                    color: #cccccc;
+                    text-align: center;
+                }
+                .footer p{
+                    font-size: 11px;
+                }
+                .footer a{
+                    color: #ccccff;
                 }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="row navigation">
-                <div class="span2 logo">
-                    logo
+        <!-- Mobile friendly navbar adapted from example -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container container-fluid">
+                <!--Brand and Toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://www.google.com">Bitstarter</a>
                 </div>
-                <div class="span6 blank">
-                    blank
-                </div>
-                <div class="span4 about">
-                    about
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+        <div class="container-fluid">
             <div class="row heading">
-                <div class="span12">
-                    <h1>My Bitstarter Website</h1>
-                </div>
-            </div>
-            <div class="row subheading">
-                <div class="span12">
-                    <p class="lead">This is my first Bitstarter website</p>
+                <div class="col-xs-10 col-xs-offset-1 text-left">
+                    <h1>Bit Starter<br><small>Crowdfunding website</small></h1>
                 </div>
             </div>
             <div class="row pitch">
-                <div class="span6 video">
-                    Video
+                <div class="video col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                    <img class="img-thumbnail center" src="http://placehold.it/540x300">
                 </div>
-                <div class="span6">
-                    <div class="thermometer">
-                        Thermometer
+                <div class="actions col-md-5 col-md-offset-0 col-xs-10 col-xs-offset-1">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <div class="statistics">
+                            <div class="col-xs-4">
+                                <div class="linediv-l">
+                                    <h3>1000</h3><p>backers</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="linediv-c">
+                                    <h3>$6000</h3><p>of $10,000</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="linediv-r">
+                                    <h3>10</h3><p>days left</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="order">
-                        Order
+                    <div class="col-xs-8 col-xs-offset-2">
+                        <div class="thermometer progress">
+                            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" aria-valunow="60" aria-valuemin"0" aria-valuemax"100" style="width: 60%;">
+                                <span class="sr-only">40% Complete (success)</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="social">
-                        Social
+                    <div class="col-xs-6 col-xs-offset-3 order">
+                        <button class="btn btn-success btn-lg">Pre-order</button>
+                    </div>
+                    <div class="col-xs-8 col-xs-offset-2 social" style="padding-top: 20px;">
+                        <button class="btn btn-twitter"><i class="fa fa-twitter"></i> | Twitter</button>
+                        <button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Facebook</button>
                     </div>
                 </div>
             </div>
+            <hr>
             <div class="row section1">
-                <div class="span12">
-                    Marketing section 1
+                <div class="asset col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                    <img class="img-thumbnail center" src="http://placehold.it/540x300">
+                </div>
+                <div class="copy col-md-5 col-md-offset-0 col-xs-10 col-xs-offset-1">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                        porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu 
+                        mollis justo velit at nunc. Fusce nec egestas sem. Donec 
+                        fringilla ante lectus, a pellentesque lacus dignissim ac. Sed 
+                        volutpat lorem ut congue malesuada. In facilisis scelerisque 
+                        turpis sed lacinia. Donec in orci lectus. Donec auctor semper 
+                        quam, eget rhoncus purus fringilla id. Phasellus id nibh eu 
+                        risus ultrices adipiscing.  Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. Donec porta, dui sagittis hendrerit 
+                        rutrum, nunc leo tempus nisl, eu mollis justo velit at 
+                        nunc. Fusce nec egestas sem. Donec fringilla.
+                    </p>
                 </div>
             </div>
+            <hr>
             <div class="row section2">
-                <div class="span 12">
-                    Marketing section 2
+                <div class="copy col-md-5 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                        porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu 
+                        mollis justo velit at nunc. Fusce nec egestas sem. Donec 
+                        fringilla ante lectus, a pellentesque lacus dignissim ac. Sed 
+                        volutpat lorem ut congue malesuada. In facilisis scelerisque 
+                        turpis sed lacinia. Donec in orci lectus. Donec auctor semper 
+                        quam, eget rhoncus purus fringilla id. Phasellus id nibh eu 
+                        risus ultrices adipiscing.  Lorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit. Donec porta, dui sagittis hendrerit 
+                        rutrum, nunc leo tempus nisl, eu mollis justo velit at 
+                        nunc. Fusce nec egestas sem. Donec fringilla.
+                    </p>
+                </div>
+                <div class="asset col-md-5 col-md-offset-0 col-xs-10 col-xs-offset-1">
+                    <img class="img-thumbnail center" src="http://placehold.it/540x300">
                 </div>
             </div>
             <div class="row faq">
-                <div class="span12">
-                    FAQ
-                </div>
-            </div>
-            <div class="row footer">
-                <div class="span12">
-                    Footer
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>What does FAQ stand for?</strong></div>
+                        <div class="panel-body">Frequently Asked Questions</div>
+                        <div class="panel-heading"><strong>What does Crowdfunding website do?</strong></div>
+                        <div class="panel-body">Crowdfunding website is a portal where startups can list themselves and people who like them can support them. Good place to start off for the initial traction.</div>
+                    </div>
                 </div>
             </div>
         </div>
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted">This is purely a work of Sushant and all rights of this work are reserved solely by him.</p>
+            </div>
+        </footer>
     </body>
 </html>
+
+
+
+
+
+
+
